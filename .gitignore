@@ -1,4 +1,6 @@
 /storage
 /node_modules
 **/*.js
+
 credentials.json
+users.json
