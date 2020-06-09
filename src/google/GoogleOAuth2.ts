@@ -1,7 +1,6 @@
-import * as fetch from 'node-fetch';
 import * as querystring from 'querystring';
 
-export type Transporter = (url: string, init?: fetch.RequestInit) => Promise<fetch.Response>;
+import Transporter from '../Transporter';
 
 export interface Token {
     access_token: string;
