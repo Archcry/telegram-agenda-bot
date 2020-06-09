@@ -31,7 +31,9 @@ class Main {
 
   private checkUsers() {
     this.users.forEach((user: any, index: number) => {
-      if(moment().format('H:mm') === user.settings.send_notification_at) {
+      const now = moment().tz(user.settings.timezone).format('H:mm');
+
+      if(user.settings.send_notification_at === now) {
         console.log("Sending events to user with id " + index);
 
         this.sendCalendarEvents(user);
