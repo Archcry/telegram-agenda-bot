@@ -14,10 +14,6 @@ jobs:
     steps:
     - uses: actions/checkout@v1
 
-    # Run ESLint
-    - name: Run ESLint
-      uses: stefanoeb/eslint-action@1.0.0
-
     # Public to NPM registry
     - name: Publish to Registry
       uses: elgohr/Publish-Docker-Github-Action@master
