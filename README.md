@@ -7,14 +7,14 @@
 
 ```
 {
-    "telegram": {
-        "api_key": ""
-    },
-    "calendar": {
-        "client_id": "",
-        "client_secret": "",
-        "redirect_uris": []
-    }
+  "telegram": {
+    "api_key": ""
+  },
+  "calendar": {
+    "client_id": "",
+    "client_secret": "",
+    "redirect_uris": []
+  }
 }
 ```
 
@@ -22,12 +22,12 @@
 
 ```
 {
-    "settings": {
-        "timezone": "",
-        "send_notification_at": ""
-    },
-    "telegram_chat_id": "",
-    "refresh_token": ""
+  "settings": {
+    "timezone": "",
+    "send_notification_at": ""
+  },
+  "telegram_chat_id": "",
+  "refresh_token": ""
 }
 ```
 
