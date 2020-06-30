@@ -61,7 +61,7 @@ class Main {
     const now = moment().tz(user.settings.timezone);
 
     const start = now.startOf('day').toISOString();
-    const end = now.endOf('day').toISOString()
+    const end = now.endOf('day').toISOString();
 
     return this.getAccessToken(user.refresh_token)
       .then(calendarApi => calendarApi.getEvents(start, end));
@@ -90,7 +90,13 @@ class Main {
 
   private parseMoment(obj: any) {
     if (obj.dateTime) {
-      return moment(obj.dateTime).tz(obj.timeZone).format('D MMM H:mm:ss');
+      let dateTimeMoment = moment(obj.dateTime);
+
+      if (obj.timeZone) {
+        dateTimeMoment = dateTimeMoment.tz(obj.timeZone);
+      }
+
+      return dateTimeMoment.format('D MMM H:mm:ss');
     }
 
     return moment(obj.date).format('D MMM');
