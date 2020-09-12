@@ -5,7 +5,7 @@
   "main": "index.js",
   "dependencies": {
     "moment-timezone": "^0.5.31",
-    "node-fetch": "^2.6.0",
+    "node-fetch": "^2.6.1",
     "querystring": "^0.2.0",
     "typescript": "^3.9.3"
   },
