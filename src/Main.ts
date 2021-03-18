@@ -22,6 +22,10 @@ class Main {
   }
 
   public start(callback?: (interval: number) => void) {
+    this.users.forEach((user: any) => {
+      this.sendCalendarEvents(user);
+    });
+
     setInterval(this.checkUsers.bind(this), Main.INTERVAL);
 
     if (callback) {
